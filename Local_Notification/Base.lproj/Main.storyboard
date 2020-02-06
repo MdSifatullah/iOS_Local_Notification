@@ -15,35 +15,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9W-wA-wZ0">
+                                <rect key="frame" x="176.5" y="208.5" width="61.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Q-KW-bpj">
+                                <rect key="frame" x="176.5" y="275.5" width="61.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HNJ-aB-czE">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbP-lH-wxy">
-                                <rect key="frame" x="167" y="408" width="80" height="79.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="7aK-GA-cUd"/>
-                                    <constraint firstAttribute="height" constant="80" id="hJW-dM-mwT"/>
-                                </constraints>
+                                <rect key="frame" x="151.5" y="581" width="111" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" backgroundImage="bell" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Set Date">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="notificationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NR6-Q2-hHo"/>
+                                    <action selector="setDateBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Cb-KK-aDq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="BbP-lH-wxy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0S3-c3-hvh"/>
-                            <constraint firstItem="BbP-lH-wxy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UeR-QW-KUi"/>
+                            <constraint firstItem="h9W-wA-wZ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AwQ-eL-2AN"/>
+                            <constraint firstItem="h9W-wA-wZ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="M77-QU-Xoc"/>
+                            <constraint firstItem="HNJ-aB-czE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mbw-9Q-i44"/>
+                            <constraint firstItem="Y7Q-KW-bpj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aX6-C9-vgb"/>
+                            <constraint firstItem="Y7Q-KW-bpj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.65" id="eZt-tV-7ZJ"/>
+                            <constraint firstItem="HNJ-aB-czE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ghw-Ab-OmO"/>
+                            <constraint firstItem="BbP-lH-wxy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.35" id="hkg-Fq-ads"/>
+                            <constraint firstItem="BbP-lH-wxy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kcF-UY-KaE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="HNJ-aB-czE" id="Ql1-OZ-lpO"/>
+                        <outlet property="dateShowTextLbl" destination="Y7Q-KW-bpj" id="lNf-g4-Pmw"/>
+                        <outlet property="titleShowLbl" destination="h9W-wA-wZ0" id="ufZ-H6-UOc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bell" catalog="system" width="64" height="62"/>
-    </resources>
 </document>
